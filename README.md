@@ -177,7 +177,8 @@ https://grafana.com/api/dashboards/3646/revisions/1/download
 # 资源删除
 
 ```bash
-[root@master ~]# kubectl delete -n kube-system  ClusterRoleBinding heapster               [root@master ~]# kubectl get all -n kube-system -o wide |grep -e monitor -e heapster |awk '{print $1}'|xargs kubectl delete  -n kube-system
+[root@master ~]# kubectl delete -n kube-system  ClusterRoleBinding heapster               
+[root@master ~]# kubectl get all -n kube-system -o wide |grep -e monitor -e heapster |awk '{print $1}'|xargs kubectl delete  -n kube-system
 [root@master ~]# rm -rf heapster-master master.zip 
 ```
 
